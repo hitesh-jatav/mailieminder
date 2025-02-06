@@ -16,5 +16,8 @@ app.listen(PORT, () => {
 });
 
 setInterval(() => {
-  console.log("🔄 Server alive check executed");
-}, 59000);
+  const currentTime = new Date().toLocaleString("en-IN", {
+    timeZone: "Asia/Kolkata",
+  });
+  console.log(`🕒 Current time in IST: ${currentTime}`);
+}, 10000); // Logs the time every 10 seconds
