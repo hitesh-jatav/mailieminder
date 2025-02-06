@@ -7,7 +7,6 @@ const startCronJobs = async () => {
     console.log("⏳ Fetching pending jobs...");
 
     let allCourses = await CourseModel.find({}).lean();
-    console.log("Fetched courses:", allCourses); // Log all courses
 
     let toScheduleCourses = allCourses.filter((cr) => cr.days > cr.currentDay);
 
