@@ -10,11 +10,10 @@ const startCronJobs = async () => {
     console.log("Fetched courses:", allCourses); // Log all courses
 
     let toScheduleCourses = allCourses.filter((cr) => cr.days > cr.currentDay);
-    console.log("Courses to schedule:", toScheduleCourses); // Log filtered courses
 
     for (let i = 0; i < toScheduleCourses.length; i++) {
       let course = toScheduleCourses[i];
-      console.log(`Processing course: ${course.name}`);
+      console.log(`Processing course: ${course.title}`);
 
       let daysToSchedule = course.days - course.currentDay;
       let daycourse = [];
